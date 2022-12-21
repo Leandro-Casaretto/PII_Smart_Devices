@@ -5,23 +5,24 @@
 //--------------------------------------------------------------------------------
 
 using System;
-using ClassLibrary;
+using AdapterExample;
 
 namespace ConsoleApplication
 {
-    /// <summary>
-    /// Programa de consola de demostración.
-    /// </summary>
+    
     public static class Program
     {
-        /// <summary>
-        /// Punto de entrada al programa principal.
-        /// </summary>
+
         public static void Main()
         {
-            var train = new Train();
-            train.StartEngines();
-            Console.WriteLine("Hello World!");
+            Plug plug = new Plug("1");
+
+            Adapter adapter = new Adapter(plug);
+            ISmartDevice Plug = adapter;
+
+            Console.WriteLine(Plug.GetStatus());
+            Plug.On();
+            
         }
     }
 }

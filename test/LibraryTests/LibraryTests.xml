@@ -4,5 +4,10 @@
         <name>LibraryTests</name>
     </assembly>
     <members>
+        <member name="M:Tests.DeviceTest.OffTest">
+            <summary>
+            Testeamos el adapter (CASO OFF)
+            </summary>
+        </member>
     </members>
 </doc>
